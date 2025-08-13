@@ -8,7 +8,7 @@ WORKDIR backend/myBookSolution.API
 
 # Clone o seu repositório do GitHub
 # OBS: Substitua 'SEU_USUARIO' e 'SEU_REPOSITORIO' pelos seus dados
-RUN git clone https://github.com/ndrxy/Projeto-Redes.git .
+#RUN git clone https://github.com/ndrxy/Projeto-Redes.git .
 
 # Restaure as dependências e compile a aplicação
 RUN dotnet restore
