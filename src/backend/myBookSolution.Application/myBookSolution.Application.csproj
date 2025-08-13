@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\myBookSolution.Exceptions\myBookSolution.Exceptions.csproj" />
     <ProjectReference Include="..\..\shared\myBookSolution.Communication\myBookSolution.Communication.csproj" />
     <ProjectReference Include="..\..\shared\myBookSolution.Exceptions\myBookSolution.Exceptions.csproj" />
     <ProjectReference Include="..\myBookSolution.Domain\myBookSolution.Domain.csproj" />
