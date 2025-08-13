@@ -6,7 +6,6 @@ using myBookSolution.API.Filters;
 using Microsoft.OpenApi.Models;
 using myBookSolution.Domain.Security.Tokens;
 using myBookSolution.API.Token;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;

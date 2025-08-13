@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using myBookSolution.API.Security.Tokens;
 using myBookSolution.Communication.Requests;
 using myBookSolution.Communication.Responses;
 using myBookSolution.Domain.Models;

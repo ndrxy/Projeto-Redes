@@ -1,0 +1,29 @@
+services:
+  # Serviço da Aplicação (Camada Lógica)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      # Variáveis de ambiente para a aplicação se conectar ao banco de dados
+      - DB_SERVER=db
+      - DB_USER=SA
+      - DB_PASSWORD=2QbT14ivWuL8
+      - DB_NAME=LivrariaDB
+    depends_on:
+      - db
+
+  # Serviço do Banco de Dados (Camada de Dados)
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=2QbT14ivWuL8
+    volumes:
+      - db_data:/var/opt/mssql
+
+# Volumes para persistir os dados do banco
+volumes:
+  db_data:
