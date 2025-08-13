@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+## Ignore ReSharper's temporary files.
+_ReSharper.*/
+*.[Ee]nterpriseLibrary.config
+*.resharper
+*.resharper.user
