@@ -54,6 +54,8 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<ITokenProvider, HttpContextTokenValue>();
 
+builder.Configuration.AddEnvironmentVariables();
+
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
