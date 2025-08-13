@@ -1,13 +1,15 @@
-using myBookSolution.Infrastructure;
-using myBookSolution.Application;
-using myBookSolution.Infrastructure.Migrations;
-using myBookSolution.Infrastructure.Extensions;
-using myBookSolution.API.Filters;
-using Microsoft.OpenApi.Models;
-using myBookSolution.Domain.Security.Tokens;
-using myBookSolution.API.Token;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using myBookSolution.API.Filters;
+using myBookSolution.API.Token;
+using myBookSolution.Application;
+using myBookSolution.Domain.Security.Tokens;
+using myBookSolution.Infrastructure;
+using myBookSolution.Infrastructure.Data;
+using myBookSolution.Infrastructure.Extensions;
+using myBookSolution.Infrastructure.Migrations;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,6 +55,19 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<ITokenProvider, HttpContextTokenValue>();
+
+builder.Services.AddDbContext<MyDbContext>(options =>
+{
+    // A string de conexão é construída a partir das variáveis de ambiente
+    var server = builder.Configuration["DB_SERVER"];
+    var database = builder.Configuration["DB_NAME"];
+    var user = builder.Configuration["DB_USER"];
+    var password = builder.Configuration["DB_PASSWORD"];
+
+    var connectionString = $"Server={server};Database={database};User Id={user};Password={password};";
+
+    options.UseSqlServer(connectionString);
+});
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
