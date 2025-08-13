@@ -36,21 +36,21 @@ public static class DependencyInjectionInfra
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         AddTokens(services, configuration);
-        AddDbContext(services, configuration);
+        //AddDbContext(services, configuration);
         AddFluentMigrator(services, configuration);
         AddRepositories(services);
         AddLoggedUser(services);
         AddLoggedCurator(services);
     }
 
-    public static void AddDbContext(IServiceCollection services, IConfiguration configuration)
+    /*public static void AddDbContext(IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("Connection");
         services.AddDbContext<MyDbContext>(dbContextOptions =>
         {
             dbContextOptions.UseSqlServer(connectionString, b => b.MigrationsAssembly("myBookSolution.API"));
         });
-    }
+    }*/
 
     private static void AddRepositories(IServiceCollection services)
     {
