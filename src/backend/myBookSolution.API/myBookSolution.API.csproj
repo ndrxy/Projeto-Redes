@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\shared\myBookSolution.Communication\myBookSolution.Communication.csproj" />
+    <ProjectReference Include="..\..\shared\myBookSolution.Exceptions\myBookSolution.Exceptions.csproj" />
     <ProjectReference Include="..\myBookSolution.Application\myBookSolution.Application.csproj" />
     <ProjectReference Include="..\myBookSolution.Infrastructure\myBookSolution.Infrastructure.csproj" />
   </ItemGroup>

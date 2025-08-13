@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{EEC60D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBookSolution.Communication", "src\shared\myBookSolution.Communication\myBookSolution.Communication.csproj", "{36D8DC24-4E45-47DF-9DFB-99AA7877ABE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBookSolution.Exceptions", "myBookSolution.Exceptions\myBookSolution.Exceptions.csproj", "{0C510752-3E78-4FEA-A604-39C11DA9D76B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myBookSolution.Exceptions", "src\shared\myBookSolution.Exceptions\myBookSolution.Exceptions.csproj", "{0C510752-3E78-4FEA-A604-39C11DA9D76B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
